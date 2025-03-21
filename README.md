@@ -1,26 +1,51 @@
 # <img src="src/main/resources/asset/connect-four.png" alt="drawing" width="50"/> The Connect-4 Game
 
-### How to use this repo
-* `git clone https://github.com/ShenanVindinu/connect-4-game-java.git`
-* Open the `pom.xml` via IntelliJ IDEA
-* Make sure to the open it as a project, if prompt
-* Reload the `pom.xml` file via **Maven Tool Window**
-* Create a run configuration for Maven via `Run > Edit Configuration`
-* Add `javafx:run` as the `Run` command
-* That's it.
-* **But do not try to run or compile the application yet**
+## Overview
+This project is a Java-based implementation of the Connect 4 game. It includes the core game logic, player interactions, and a simple interface to play the game. The AI component (Monte Carlo Tree Search) is not included in this version.
 
-### FAQ
+## Features 💖
+- Two-player mode (human vs. human)
+- Console-based game interface
+- Board validation and win-checking logic
+- Error handling for invalid moves
 
-**Q: Can I delete the `.gitkeep` file in `lk.ijse.dep.service` package?**<br>
-Yes, you can
+## Installation 🥬🧦
+1. Clone the repository:
+   ```sh
+   git clone https://github.com/ShenanVindinu/connect-4-game-java.git
+   ```
+2. Navigate to the project directory:
+   ```sh
+   cd connect4-game-java
+   ```
+3. Compile the Java files:
+   ```sh
+   javac Main.java
+   ```
+4. Run the game:
+   ```sh
+   java Main
+   ```
 
-**Q: Why can't I run any games that are in the release page?**<br>
-Open a terminal window and type `java -version` to find out the java version. **[You should have JDK 11 installed](https://www.openlogic.com/openjdk-downloads?field_java_parent_version_target_id=406&field_operating_system_target_id=All&field_architecture_target_id=All&field_java_package_target_id=All)** on your system to run these games. **_Other JDK versions might not work._** If you have JDK 11 installed on your system and still unable to run the games, then seek your course instructor's help to get it work.
+## Game Rules ⚖️
+- The game is played on a 7x6 grid.
+- Players take turns dropping pieces into a column.
+- The first player to connect four of their pieces in a row (horizontally, vertically, or diagonally) wins.
+- If the board is full without a winner, the game ends in a draw.
 
-### Version
-0.0.6
+## How to Play 🏆
+1. The game prompts Player 1 and Player 2 to enter a column number (0-6) to drop their piece.
+2. The board updates after each move and is displayed on the console.
+3. The game announces the winner or a draw when the game ends.
 
-### License
-Copyright © 2023 DEP. All rights reserved <br>
-This project is licensed under the [MIT](LICENSE.txt) License.
+## File Structure
+```
+connect4-game/
+│-- src/
+│   │-- Main.java
+│   │-- Game.java
+│   │-- Board.java
+│   │-- Player.java
+│-- README.md
+│-- .gitignore
+```
